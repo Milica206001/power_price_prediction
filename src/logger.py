@@ -1,7 +1,6 @@
 import logging
 import os
 from datetime import datetime
-from exception import CustomException
 import sys
 
 LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
@@ -15,6 +14,3 @@ logging.basicConfig(
     format="[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
-
-
-
