@@ -5,4 +5,9 @@ matplotlib
 scikit-learn
 ipykernel
 jupyter
+dill
+catboost
+category_encoders
+xgboost
+optuna
 #-e .
