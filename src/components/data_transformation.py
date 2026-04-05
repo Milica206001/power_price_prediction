@@ -24,39 +24,6 @@ class DataTransformationConfig:
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config = DataTransformationConfig()
-    
-        self.categories = {
-            'Foundation_Provincialization_Independence': [
-                'Fundacion de Manta', 'Provincializacion de Cotopaxi', 'Fundacion de Cuenca',
-                'Cantonizacion de Libertad', 'Cantonizacion de Riobamba', 'Cantonizacion del Puyo',
-                'Cantonizacion de Guaranda', 'Provincializacion de Imbabura', 'Cantonizacion de Latacunga',
-                'Fundacion de Machala', 'Fundacion de Santo Domingo', 'Cantonizacion de El Carmen',
-                'Cantonizacion de Cayambe', 'Fundacion de Esmeraldas', 'Primer Grito de Independencia',
-                'Fundacion de Riobamba', 'Fundacion de Ambato', 'Fundacion de Ibarra',
-                'Cantonizacion de Quevedo', 'Independencia de Guayaquil', 'Traslado Independencia de Guayaquil',
-                'Cantonizacion de Salinas', 'Independencia de Cuenca', 'Provincializacion de Santo Domingo',
-                'Provincializacion Santa Elena', 'Independencia de Guaranda', 'Independencia de Latacunga',
-                'Independencia de Ambato', 'Fundacion de Quito-1', 'Fundacion de Quito', 'Fundacion de Loja',
-                'Traslado Fundacion de Guayaquil', 'Traslado Primer Grito de Independencia',
-                'Traslado Fundacion de Quito', 'Fundacion de Guayaquil-1', 'Fundacion de Guayaquil'
-            ],
-            'Holidays': [
-                'Navidad-4','Dia de Difuntos', 'Navidad-3', 'Navidad-2', 'Puente Navidad',
-                'Navidad-1', 'Navidad', 'Navidad+1', 'Puente Primer dia del ano', 'Primer dia del ano-1',
-                'Primer dia del ano', 'Recupero puente Navidad', 'Recupero puente primer dia del ano',
-                'Carnaval', 'Viernes Santo', 'Dia del Trabajo', 'Dia de la Madre-1', 'Dia de la Madre',
-                'Batalla de Pichincha','Traslado Batalla de Pichincha', 'Puente Dia de Difuntos'
-            ],
-            'Entertainment': ['Black Friday','Cyber Monday', 'Mundial'],
-            'Earthquake': ['Terremoto Manabi']
-        }
-
-    def _categorize_event(self, event):
-        """Helper to map specific holiday names to broader categories."""
-        for category, events_list in self.categories.items():
-            if any(substring in str(event) for substring in events_list):
-                return category
-        return 'Other'
 
     def _is_payday(self, date):
         """Logic for 15th and last day of month."""

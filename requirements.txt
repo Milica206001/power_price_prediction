@@ -10,4 +10,5 @@ catboost
 category_encoders
 xgboost
 optuna
+flask
 #-e .
